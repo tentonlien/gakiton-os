@@ -1,2 +1,2 @@
-# gakiton_os
-A tiny operating system kernel for academic research
+# Gakiton OS
+A tiny operating system kernel for academic research.

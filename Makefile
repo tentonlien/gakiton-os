@@ -9,10 +9,10 @@ ASFLAGS = -f elf
 all: kernel.elf
 
 kernel.elf: $(OBJECTS)
-	ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
+	ld $(LDFLAGS) $(OBJECTS) -o iso/boot/kernel.elf
 
 os.iso: kernel.elf
-	cp kernel.elf iso/boot/kernel.elf
+	# cp kernel.elf iso/boot/kernel.elf
 	genisoimage -R                              \
 				-b boot/grub/stage2_eltorito    \
 				-no-emul-boot                   \
@@ -33,4 +33,4 @@ run: os.iso
 	$(AS) $(ASFLAGS) $< -o $@
 
 clean:
-	rm -rf *.o kernel.elf os.iso
+	rm -rf *.o iso/boot/kernel.elf os.iso

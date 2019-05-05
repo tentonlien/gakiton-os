@@ -21,7 +21,7 @@ void login() {
     
 
     while(1) {
-        //write(read_scan_code());
+        // write(read_scan_code());
     }
     
 }
